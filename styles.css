@@ -49,11 +49,6 @@ header nav a {
     min-height: 5vh; 
 }
 
-
-#skills {
-    min-height: 30vh; 
-}
-
 #experience {
     min-height: 10vh; 
     margin-top: -50px; 
@@ -306,8 +301,8 @@ header nav a {
 }
 
 #skills {
-    min-height: 85vh;
-    margin-top: -10;
+    min-height: 75vh;
+    margin-top: -300px;
     padding: 20px;
     text-align: center;
 }
