@@ -441,6 +441,80 @@ header nav a {
     .timeline-container.right .content {
         text-align: left;
     }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #home .intro {
+        flex-direction: column;
+        text-align: center;
+        margin-top: -50px;
+    }
+
+    #home .intro img {
+        width: 80%;
+        height: auto;
+    }
+
+    .project-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .timeline-container.left,
+    .timeline-container.right {
+        left: 0;
+    }
+
+    .timeline-container.right .content {
+        text-align: left;
+    }
+
+    .timeline-container::after {
+        display: none; /* Hide the vertical line */
+    }
+
+    #experience .timeline-container {
+        width: 100%;
+    }
+
+    .timeline-container .content {
+        text-align: left;
+        padding: 20px;
+    }
+
+    #skills .skill {
+        width: 30%;
+        margin: 5px;
+    }
+
+    .skill img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .contact-icon {
+        margin: 5px 0;
+    }
 }
 
 .timeline-container .content {
