@@ -223,7 +223,7 @@ header nav a {
     overflow: hidden; 
     object-fit: cover; 
     margin-left: -20px;
-    padding-bottom: 60px;
+    padding-bottom: 25px;
 }
 
 
@@ -295,8 +295,8 @@ header nav a {
 }
 
 #skills {
-    min-height: 75vh;
-    margin-top: -300px;
+    min-height: 150vh;
+    margin-top: -120px;
     padding: 10px;
     text-align: center;
 }
@@ -422,28 +422,25 @@ header nav a {
     color: #999;
 }
 
-@media screen and (max-width: 600px) {
-    .timeline-container::after {
-        left: 50%;
-        margin-left: -10px;
-    }
-
-    .timeline-container.right {
-        left: 0;
-    }
-
-    .timeline-container.right .content {
-        text-align: left;
-    }
-
+@media screen and (max-width: 390px) {
     header {
         flex-direction: column;
+        align-items: flex-end;
         padding: 10px;
     }
 
     header nav {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
         gap: 5px;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    header nav a {
+        flex: 1 1 45%; /* Adjust to fit two per row */
+        text-align: right;
+        padding: 5px;
     }
 
     #home .intro {
@@ -452,9 +449,15 @@ header nav a {
         margin-top: -50px;
     }
 
+    #home .intro div {
+        order: 1;
+    }
+
     #home .intro img {
+        order: 2;
         width: 80%;
         height: auto;
+        margin-top: 20px; /* Add space between text and image */
     }
 
     .project-box {
@@ -509,7 +512,38 @@ header nav a {
     .contact-icon {
         margin: 5px 0;
     }
+
+    .container {
+        padding-top: 60px; /* Adjusted to accommodate fixed header */
+    }
+
+    .section {
+        padding: 50px 10px; /* Reduced padding for smaller screens */
+    }
+
+    .intro h2 {
+        font-size: 1.8em; /* Adjust heading size */
+    }
+
+    .intro p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    .education-details .modules li {
+        font-size: 1em; /* Adjust list item size */
+    }
+
+    .block .small h2 {
+        font-size: 2em; /* Adjust about me heading size */
+    }
+
+    .block .large p {
+        font-size: 1em; /* Adjust about me paragraph size */
+    }
 }
+
+
+
 
 .timeline-container .content {
     padding: 10px 20px;
