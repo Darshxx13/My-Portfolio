@@ -295,8 +295,8 @@ header nav a {
 }
 
 #skills {
-    min-height: 150vh;
-    margin-top: -120px;
+    min-height: 85vh;
+    margin-top: -280px;
     padding: 10px;
     text-align: center;
 }
