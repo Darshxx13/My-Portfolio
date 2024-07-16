@@ -421,7 +421,10 @@ header nav a {
 }
 
 
-@media screen and (max-width: 390px) {
+@media only screen 
+    and (width: 414px) 
+    and (height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { 
     header {
         flex-direction: column;
         align-items: flex-end;
