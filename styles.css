@@ -194,35 +194,32 @@ header nav a {
     transform: scale(.8);
 }
 
-
 #picture-between {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: bottom;
+    align-items: bottom;
     width: 100%;
     height: 250px;
     overflow: hidden; 
     object-fit: cover; 
-    margin-bottom: -120px;
-
+    background-color: #d92f5f;
 }
 
 #picture-between img {
     width: 100%;
     object-fit: cover; 
-    object-position: center;  
+    object-position: bottom;  
+    padding-bottom: 0;
+    background-color: #d92f5f;
 }
-
 
 
 .education {
     width: 100%; 
-    background-color: #1e1e1e;
     margin: 0; 
     padding: 30px; 
     text-align: center; 
-    border-top: 8px solid hsl(343, 69%, 52%); 
     overflow: hidden; 
     object-fit: cover; 
     margin-left: -20px;
@@ -231,12 +228,13 @@ header nav a {
 
 
 #education-skills {
+    border-top: 8px solid hsl(343, 69%, 52%); 
+    background-color: #1e1e1e;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    min-height: 95vh; 
-
+    min-height: 65vh; 
 }
 
 .education-details .modules li {
@@ -300,17 +298,15 @@ header nav a {
     overflow: hidden; 
     object-fit: cover; 
     justify-content: flex-start; /* Ensure content starts at the top */
-    min-height: 75px;
+    min-height: 95px;
 }
   
-
 .skill {
     text-align: center;
     margin: 10px 20px;
     transition: transform 0.3s ease; 
     vertical-align: middle;
-    margin-bottom: 50px;
-    min-height: 75px;
+    margin-bottom: 60px;
 }
 
 .skill img {
@@ -424,43 +420,73 @@ header nav a {
 
 
 @media only screen 
-    and (max-width: 390px)  { 
+    and (max-width: 414px)  { 
     header {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         padding: 10px;
         width: 100%;
     }
 
+    header .logo {
+        margin-bottom: 10px; /* Add margin to space out the name from the menu */
+    }
+
     header nav {
+        width: 95%;
         display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        justify-content: flex-end;
-        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
     }
 
     header nav a {
-        flex: 1 1 45%; /* Adjust to fit two per row */
-        text-align: right;
-        padding: 5px;
+        margin-right: 10px; /* Add margin to stack menu items vertically */
+        text-align: right; 
     }
 
     #home .intro {
         flex-direction: column;
         text-align: center;
-        margin-top: -50px;
+        width: 100%;
+        padding: 50px 10px;
     }
 
     #home .intro div {
         order: 1;
         width: 100%; /* Ensure full width for centering text */
+        text-align: center;
     }
 
     #home .intro img {
         order: 2;        
         height: auto;
         margin-top: 20px; /* Add space between text and image */
+    }
+
+    .intro h2 {
+        font-size: 1.8em; /* Adjust heading size */
+    }
+
+    .intro p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    .contact-icons {
+        order: 3;
+        bottom: 0;
+        margin-top: auto; /* Push icons to the bottom of the section */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        display: flex;
+        flex-direction: row; /* Align icons in a row */
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px; /* Add some padding to the bottom */
+    }
+
+    .contact-icon {
+        margin: 0 10px; /* Adjust space between icons */
+        transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth scaling and brightness change */
     }
 
     .project-box {
@@ -506,31 +532,10 @@ header nav a {
         height: auto;
     }
 
-    .contact-icons {
-        flex-direction: column;
-        bottom: 20px;
-        right: 10px;
-    }
-
-    .contact-icon {
-        margin: 5px 0;
-    }
-
     .container {
         padding-top: 60px; /* Adjusted to accommodate fixed header */
     }
 
-    .section {
-        padding: 50px 10px; /* Reduced padding for smaller screens */
-    }
-
-    .intro h2 {
-        font-size: 1.8em; /* Adjust heading size */
-    }
-
-    .intro p {
-        font-size: 1em; /* Adjust paragraph size */
-    }
 
     .education-details .modules li {
         font-size: 1em; /* Adjust list item size */
@@ -605,4 +610,35 @@ header nav a {
 .project-box:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media only screen and (max-width: 767px) {
+    .timeline-container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .timeline-container.left, .timeline-container.right {
+        left: 0;
+        right: 0;
+    }
+
+    .timeline-container::after {
+        display: none;
+    }
+
+    .timeline-container.right::after {
+        display: none;
+    }
+
+    .timeline-container .content {
+        text-align: center;
+    }
+
+    .project-box {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
 }
