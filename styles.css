@@ -75,7 +75,6 @@ header nav a {
     justify-content: space-between;
     width: 100%;
     max-width: 70%;
-    margin-top: -150px; 
 }
 
 #home .intro h2 {
@@ -292,16 +291,6 @@ header nav a {
     width: 100%;
 } 
 
-.skill img {
-    width: 90px; 
-    height: 90px;
-}
-
-.skill p {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-
 #skills {
     display: flex;
     align-items: center;
@@ -311,6 +300,7 @@ header nav a {
     overflow: hidden; 
     object-fit: cover; 
     justify-content: flex-start; /* Ensure content starts at the top */
+    min-height: 75px;
 }
   
 
@@ -320,6 +310,7 @@ header nav a {
     transition: transform 0.3s ease; 
     vertical-align: middle;
     margin-bottom: 50px;
+    min-height: 75px;
 }
 
 .skill img {
@@ -343,7 +334,6 @@ header nav a {
     font-size: 2em;
     text-align: top;
     color: #ffffff; 
-    margin-top: -5px;
     vertical-align: middle;
     margin-bottom: 50px;
 }
