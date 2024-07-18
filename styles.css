@@ -100,6 +100,7 @@ header nav a {
 .contact-icon {
     margin: 0 20px;
     transition: transform 0.3s ease, filter 0.3s ease; 
+    padding-bottom: 40px;
 }
 
 .contact-icon:hover {
@@ -361,7 +362,7 @@ header nav a {
 }
 
 .timeline-container.left {
-    left: 4.7%;
+    left: calc(10% - 76px);
 }
 
 .timeline-container.right {
@@ -384,6 +385,7 @@ header nav a {
 .timeline-container.right::after {
     left: -16px;
 }
+
 
 .timeline-container .content {
     padding: 10px 20px;
@@ -477,7 +479,7 @@ header nav a {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .timeline-container {
         width: 100%;
         padding: 10px;
@@ -500,16 +502,27 @@ header nav a {
     .timeline-container .content {
         text-align: center;
     }
+    .timeline-container::after {
+        display: none; /* Hide the vertical line */
+        width: 0px;
+    }
 
     .project-box {
         width: calc(100% - 40px);
         margin: 20px;
     }
+
+    .timeline::after {
+        display: none;
+        width: 0px;
+        background-color: #d92f5f;
+    }
+    
 }
 
 
 @media only screen 
-    and (max-width: 430px)  { 
+    and (max-width: 768px)  { 
     header {
         flex-direction: column;
         align-items: center;
@@ -520,16 +533,7 @@ header nav a {
     header .logo {
         margin-bottom: 10px; /* Add margin to space out the name from the menu */
     }
-    /*
-
-    header nav {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        padding-right: 20px;
-    }
-        */
+    
 
     header nav a {
         margin-left: 0;
@@ -579,7 +583,6 @@ header nav a {
     }
 
     .contact-icons {
-        order: 3;
         position: relative;
         bottom: 0;
         display: flex;
@@ -598,6 +601,7 @@ header nav a {
     .project-box {
         width: 100%;
         margin: 10px 0;
+        padding-right: 20px;
     }
 
     .timeline-container {
@@ -618,7 +622,6 @@ header nav a {
     .timeline-container::after {
         display: none; /* Hide the vertical line */
         width: 0px;
-
     }
 
     .timeline::after {
@@ -642,7 +645,7 @@ header nav a {
     }
 
     .skill img {
-        width: 85%;
+        width: 55%;
         height: auto;
     }
 
@@ -702,5 +705,41 @@ header nav a {
         text-align: center;
     }
     
-    
 }
+
+@media only screen 
+    and (max-width: 1024px)  { 
+
+    #home .intro {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding: 30px 10px;
+
+    }
+
+    #home .intro div {
+        order: 1;
+        width: 100%; 
+        text-align: center;
+    }
+
+    #home .intro img {
+        order: 2;        
+        margin-top: 30px; 
+    }
+
+    .intro h2 {
+        font-size: 1.8em; 
+        padding-top: 30px;
+
+    }
+    .intro p {
+        font-size: 1em; 
+    }
+
+    .contact-icon {
+        padding-bottom: 20px;
+    }
+}
+
