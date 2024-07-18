@@ -319,7 +319,6 @@ header nav a {
     filter: invert(200%) brightness(80%); /*cause the latex is dark and blends w bg */
 }
 
-
 .skill p {
     margin-top: 10px;
     font-size: 1.2em;
@@ -433,14 +432,14 @@ header nav a {
     }
 
     header nav {
-        width: 95%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
     }
 
     header nav a {
-        margin-right: 10px; /* Add margin to stack menu items vertically */
+        margin-right: 0px; /* Add margin to stack menu items vertically */
         text-align: right; 
     }
 
@@ -454,21 +453,21 @@ header nav a {
 
     #home .intro div {
         order: 1;
-        width: 100%; /* Ensure full width for centering text */
+        width: 100%; 
         text-align: center;
     }
 
     #home .intro img {
         order: 2;        
-        margin-top: 20px; /* Add space between text and image */
+        margin-top: 20px; 
     }
 
     .intro h2 {
-        font-size: 1.8em; /* Adjust heading size */
+        font-size: 1.8em; 
     }
 
     .intro p {
-        font-size: 1em; /* Adjust paragraph size */
+        font-size: 1em; 
     }
 
     .contact-icons {
@@ -543,20 +542,30 @@ header nav a {
         font-size: 1em; /* Adjust list item size */
     }
 
+    .block {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+        overflow: hidden; 
+        object-fit: cover; 
+        justify-content: flex-start;
+        padding-right: 40px;
+    }
+
     .block .small h2 {
-        order: 1;
         font-size: 2em; /* Adjust about me heading size */
         text-align: center; /* Center align heading */
         width: 100%; /* Ensure full width for centering text */
+        margin: 0 auto; /* Center the text within the container */
     }
 
     .block .large p {
-        order: 2;
-        font-size: 1em; /* Adjust about me paragraph size */
         text-align: center; /* Center align paragraph */
         width: 100%; /* Ensure full width for centering text */
-        margin: 0 auto; /* Center the text within the container */
     }
+    
 }
 
 .timeline-container .content {
