@@ -156,6 +156,7 @@ header nav a {
 
 #about .large p {
     font-size: 1.2em;
+    padding-right: 20px;
 }
 
 .arrow {
@@ -277,6 +278,7 @@ header nav a {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    padding-right: 20px;
 }
 
 .skills-container {
@@ -698,7 +700,6 @@ header nav a {
         overflow: hidden; 
         padding: 30px; /* Adjust padding as needed */
         padding-left: 20px;
-        padding-right: 10px;
     }
     
     .education h2 {
