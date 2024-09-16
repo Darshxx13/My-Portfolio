@@ -401,13 +401,14 @@ header nav a {
 }
 
 .timeline-container .content h4 {
-    margin: 0;
+    margin-top: -8px;
     font-size: 1.2em;
     color: #333;
 }
 
 .timeline-container .content p {
     margin: 10px 0;
+    margin-top: -10px;
     color: #666;
 }
 
