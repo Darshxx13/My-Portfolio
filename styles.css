@@ -217,17 +217,14 @@ header nav a {
     background-color: #d92f5f;
 }
 
-
 .education {
     width: 100%; 
-    margin: 0; 
-    padding: 30px; 
+    padding: 15px; 
     text-align: center; 
     overflow: hidden; 
     object-fit: cover; 
-    margin-left: -20px;
+    margin-left: -10px;
 }
-
 
 #education-skills {
     border-top: 8px solid hsl(343, 69%, 52%); 
@@ -236,7 +233,6 @@ header nav a {
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    min-height: 65vh; 
 }
 
 .education-details .modules li {
@@ -262,7 +258,6 @@ header nav a {
     flex-direction: column;
     justify-content: flex-start; /* Ensure content starts at the top */
     align-items: center;
-    margin-top: -5px;
 }
 
 
@@ -286,7 +281,7 @@ header nav a {
 }
 
 .skills-container {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -346,7 +341,7 @@ header nav a {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .timeline::after {
@@ -436,13 +431,8 @@ header nav a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-#projects {
-    min-height: 70vh;
-}
-
 #projects h2 {
     font-size: 2em;
-    margin-bottom: 20px;
     text-align: center;
     color: #ffffff; 
     flex-direction: column;
@@ -458,14 +448,13 @@ header nav a {
 
 .project-box {
     width: 430px;
-    margin: 10px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
     overflow: hidden;
-    padding: 20px;
-    padding-right: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .project-box img {
@@ -475,18 +464,15 @@ header nav a {
 }
 
 .project-box h3 {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 1.5em;
     color: #d92f5f;
+    margin-bottom: 10px;
 }
 
 .project-box:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#contact {
-    margin-top: -20px; /* Move the section 20px upward */
 }
 
 @media only screen and (max-width: 768px) {
