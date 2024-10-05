@@ -30,6 +30,7 @@ header nav a {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .container {
