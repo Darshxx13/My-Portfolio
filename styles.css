@@ -119,6 +119,11 @@ header nav a {
     height: 50px;
 }
 
+.icon-github {
+    width: 60px; 
+    height: 60px;
+}
+
 .block {
     display: flex;
     align-items: center; 
