@@ -39,6 +39,7 @@ header nav a {
 
 .section {
     display: flex;
+    scroll-margin-top: 50px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -168,40 +169,6 @@ header nav a {
     padding-right: 20px;
 }
 
-.arrow {
-    width: 4vmin;
-    height: 4vmin;
-    box-sizing: border-box;
-    position: absolute;
-    left: 50%;
-    bottom: 30px; 
-    transform: translateX(-50%) rotate(135deg); /* Rotate to arrow downwards */
-}
-
-.arrow::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-width: .4vmin .4vmin 0 0;
-    border-style: solid;
-    border-color: #fafafa;
-    transition: .2s ease;
-    display: block;
-    transform-origin: 0 100%;
-}
-
-.arrow::before,
-
-.arrow:hover::after {
-    border-color: #d92f5f;
-    transform: scale(1.2); 
-}
-
-.arrow:hover::before {
-    border-color: #d92f5f;
-    transform: scale(.8);
-}
-
 #picture-between {
     display: flex;
     flex-direction: column;
@@ -261,7 +228,7 @@ header nav a {
     margin-bottom: 20px;
     text-align: center;
     flex-direction: column;
-    justify-content: flex-start; /* Ensure content starts at the top */
+    justify-content: flex-start; 
     align-items: center;
 }
 
@@ -300,8 +267,8 @@ header nav a {
     width: 100%;
     overflow: hidden; 
     object-fit: cover; 
-    justify-content: flex-start; /* Ensure content starts at the top */
-    min-height: 95px;
+    justify-content: flex-start; 
+    scroll-margin-top: 80px; 
 }
   
 .skill {
@@ -319,7 +286,7 @@ header nav a {
 }
 
 .skill img.brightness-low {
-    filter: invert(200%) brightness(80%); /*cause the latex is dark and blends w bg */
+    filter: invert(200%) brightness(80%); 
 }
 
 .skill p {
@@ -440,7 +407,7 @@ header nav a {
     text-align: center;
     color: #ffffff; 
     flex-direction: column;
-    justify-content: flex-start; /* Ensure content starts at the top */
+    justify-content: flex-start; 
     align-items: center;
 }
 
@@ -503,7 +470,7 @@ header nav a {
         text-align: center;
     }
     .timeline-container::after {
-        display: none; /* Hide the vertical line */
+        display: none; 
         width: 0px;
     }
 
@@ -530,7 +497,7 @@ header nav a {
     }
 
     header .logo {
-        margin-bottom: 10px; /* Add margin to space out the name from the menu */
+        margin-bottom: 10px; 
     }
     
     header nav a {
@@ -545,8 +512,8 @@ header nav a {
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; /* Allow items to wrap into multiple rows */
-        justify-content: center; /* Center items horizontally */
+        flex-wrap: wrap; 
+        justify-content: center; 
         align-items: center;
     }
 
@@ -585,15 +552,15 @@ header nav a {
         position: relative;
         bottom: 0;
         display: flex;
-        flex-direction: row; /* Align icons in a row */
+        flex-direction: row; 
         justify-content: center;
         align-items: center;
     }
 
     .contact-icon {
         padding-left: 10px;
-        margin: 0 20px; /* Adjust space between icons */
-        transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth scaling and brightness change */
+        margin: 0 20px; 
+        transition: transform 0.3s ease, filter 0.3s ease; 
     }
 
     .project-box {
@@ -618,7 +585,7 @@ header nav a {
     }
 
     .timeline-container::after {
-        display: none; /* Hide the vertical line */
+        display: none; 
         width: 0px;
     }
 
@@ -648,18 +615,18 @@ header nav a {
     }
 
     .education-details .modules li {
-        font-size: 1em; /* Adjust list item size */
+        font-size: 1em; 
         margin: 5px 15px; 
     }
 
     .block .small {
         display: flex;
-        justify-content: center; /* Horizontally center the content */
-        align-items: center; /* Vertically center the content */
-        text-align: center; /* Center text inside */
-        flex-direction: column; /* Ensures vertical alignment of content */
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+        flex-direction: column; 
         width: 100%;
-        height: 100%; /* Ensure it uses the full height of its container */
+        height: 100%; 
     }  
     
 
@@ -678,16 +645,16 @@ header nav a {
     }
 
     .block .small h2 {
-        font-size: 2em; /* Adjust about me heading size */
-        text-align: center; /* Center align heading */
-        width: 100%; /* Ensure full width for centering text */
+        font-size: 2em; 
+        text-align: center; 
+        width: 100%; 
         margin-bottom: -40px;
 
     }
 
     .block .large p {
-        text-align: center; /* Center align paragraph */
-        width: 100%; /* Ensure full width for centering text */
+        text-align: center; 
+        width: 100%; 
 
     }
     #about .small h2 {
@@ -695,9 +662,7 @@ header nav a {
         text-align: center;
         margin-top: 0px;
     }
-    .arrow::after {
-        display: none;
-    }
+
     .education {
         display: flex;
         flex-direction: column;
@@ -715,7 +680,7 @@ header nav a {
     }
     
     .education h2 {
-        margin: 0 auto; /* Center the heading within the container */
+        margin: 0 auto; 
         text-align: center;
     }
     
@@ -767,3 +732,60 @@ header nav a {
     }
 }
 
+#picture-between.cta-section {
+  position: relative;
+  background: url('bg and img/pic05.jpg') center/cover no-repeat;
+  height: 300px;               
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+#picture-between.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+#picture-between .cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5em;
+  padding: 0.75em 2em;
+  background: #fff;
+  color: #0e1215;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+#home {
+  position: relative;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+
+#home .intro {
+  position: relative;
+  z-index: 2;
+}
