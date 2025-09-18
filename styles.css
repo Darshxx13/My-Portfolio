@@ -411,6 +411,15 @@ header nav a {
     align-items: center;
 }
 
+#research h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #ffffff; 
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
 .projects-container {
     display: flex;
     justify-content: center;
