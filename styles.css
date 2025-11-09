@@ -121,6 +121,8 @@ header nav a:hover::after {
 
 #home {
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 #about {
@@ -148,6 +150,8 @@ header nav a:hover::after {
     justify-content: space-between;
     width: 100%;
     max-width: 80%;
+    position: relative;
+    z-index: 2;
 }
 
 #home .intro h2 {
@@ -627,43 +631,6 @@ header nav a:hover::after {
 }
 
 
-@media only screen and (max-width: 768px) {
-    .timeline-container {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .timeline-container.left, .timeline-container.right {
-        left: 0;
-        right: 0;
-    }
-
-    .timeline-container::after {
-        display: none;
-    }
-
-    .timeline-container.right::after {
-        display: none;
-    }
-
-    .timeline-container .content {
-        text-align: center;
-    }
-    .timeline-container::after {
-        display: none; 
-        width: 0px;
-    }
-
-
-    .timeline::after {
-        display: none;
-        width: 0px;
-        background-color: #d92f5f;
-    }
-    
-}
-
 @media only screen 
     and (max-width: 768px)  { 
     header {
@@ -678,13 +645,12 @@ header nav a:hover::after {
     }
     
     header nav a {
-        margin-left: 0;
-        margin-right: 18px; 
+        margin-left: 5;
+        margin-right: 5px; 
         text-align: right; 
         padding-top: 2px;
     }
     
-
     header nav {
         width: 100%;
         display: flex;
@@ -693,7 +659,6 @@ header nav a:hover::after {
         justify-content: center; 
         align-items: center;
     }
-
 
 
     #home .intro {
@@ -740,20 +705,18 @@ header nav a:hover::after {
         transition: transform 0.3s ease, filter 0.3s ease; 
     }
 
-
     .timeline-container {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .timeline-container.left,
     .timeline-container.right {
         left: 0;
-    }
-
-    .timeline-container.right .content {
-        text-align: left;
+        right: 0;
     }
 
     .timeline-container::after {
@@ -764,11 +727,6 @@ header nav a:hover::after {
     .timeline::after {
         display: none;
         width: 0px;
-        background-color: #d92f5f;
-    }
-
-    #experience .timeline-container {
-        width: 100%;
     }
 
     .timeline-container .content {
@@ -784,11 +742,6 @@ header nav a:hover::after {
     .skill img {
         width: 55%;
         height: auto;
-    }
-
-    .education-details .modules li {
-        font-size: 1em; 
-        margin: 5px 15px; 
     }
 
     .block .small {
@@ -843,19 +796,9 @@ header nav a:hover::after {
         width: 100%; 
         text-align: center; 
         overflow: hidden; 
-        padding: 15px; 
+        padding-left: 10px;
     }
-    
-    .education-details p {
-        font-size: 1.25em;
-        margin-right: 10px;
-    }
-    
-    .education h2 {
-        margin: 0 auto; 
-        text-align: center;
-    }
-    
+
     .project-box {
         width: 430px;
         text-align: center;
@@ -944,11 +887,6 @@ header nav a:hover::after {
   transform: scale(1.05);
 }
 
-#home {
-  position: relative;
-  overflow: hidden;
-}
-
 #particles-js {
   position: absolute;
   top: 0; left: 0;
@@ -956,7 +894,3 @@ header nav a:hover::after {
   z-index: 1;
 }
 
-#home .intro {
-  position: relative;
-  z-index: 2;
-}
