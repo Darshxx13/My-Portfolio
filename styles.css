@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
     padding: 20px;
     position: fixed;
-    width: 98%;
+    width: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -228,6 +228,7 @@ header nav a:hover::after {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: -5px;
 }
 
 
@@ -263,12 +264,21 @@ header nav a:hover::after {
 
 .education {
     width: 100%; 
-    padding: 15px; 
     text-align: center; 
     overflow: hidden; 
     object-fit: cover; 
-    margin-left: -10px;
+    margin-left: -5px;
 }
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
 
 #education-skills {
     background: radial-gradient(circle at 20% 20%, rgba(4, 1, 2, 0.40));
@@ -297,20 +307,23 @@ header nav a:hover::after {
 }
 
 .modules-tabs {
-    display: inline-flex;
-    gap: 12px;
-    padding: 10px;
+    display: flex;             
+    justify-content: center;    
+    align-items: center;  
+    gap: 10px;
+    padding: 6px;
     background: rgba(32, 34, 44, 0.8);
     border-radius: 999px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;       
     position: relative;
+    width: fit-content;   
 }
 
 .modules-tab {
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, 0.6);
-    padding: 10px 22px;
+    padding: 8px 22px;
     border-radius: 999px;
     font-size: 0.95em;
     font-weight: 500;
@@ -631,6 +644,33 @@ header nav a:hover::after {
 }
 
 
+@media only screen and (max-width: 400px)  { 
+    /*
+
+    .education-details h2{
+        font-size: 1.8em;
+    }
+
+    .education-details p {
+        font-size: 1.15em;
+    }
+
+    .education h2, .education p {
+        overflow-wrap: anywhere;      
+        word-break: break-word;       
+    }
+          
+
+    .modules-tabs {
+        display: inline-flex;
+        gap: 6px;
+        margin-bottom: 24px;
+        position: relative;
+    }
+        */
+    }
+  
+
 @media only screen 
     and (max-width: 768px)  { 
     header {
@@ -764,8 +804,6 @@ header nav a:hover::after {
         overflow: hidden; 
         object-fit: cover; 
         justify-content: flex-start;
-        padding-right: 40px;
-        padding-left: 0;
 
     }
 
@@ -794,13 +832,20 @@ header nav a:hover::after {
         align-items: center;
         justify-content: center;
         width: 100%; 
+        max-width: 100%;
         text-align: center; 
-        overflow: hidden; 
+        overflow: visible; 
         padding-left: 10px;
     }
 
+    .education h2,
+    .education p {
+    overflow-wrap: anywhere;     
+    word-break: break-word;      
+    }
+
     .project-box {
-        width: 430px;
+        width: auto;
         text-align: center;
         cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -893,4 +938,25 @@ header nav a:hover::after {
   width: 100%; height: 100%;
   z-index: 1;
 }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+
+@media (max-width: 400px) {
+  .modules-tabs {
+    display: flex;          /* not inline-flex */
+    flex-wrap: wrap;        /* allow wrap */
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px;
+  }
+ 
+}
+
+
+
 
