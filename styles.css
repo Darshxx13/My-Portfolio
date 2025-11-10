@@ -152,7 +152,7 @@ header nav a:hover::after {
 }
 
 #home .intro h2 {
-    font-size: 3.2em; 
+    font-size: 3.2rem; 
 }
 
 #home .intro p {
@@ -688,6 +688,16 @@ header nav a:hover::after {
   z-index: 1;
 }
 
+@media (max-width: 400px) {
+  .modules-tabs {
+    width: 98%;
+    justify-content: center;
+    gap: 0px;
+    padding: 6px 0px;
+  }
+
+}
+
 @media only screen 
     and (max-width: 768px)  { 
     header {
@@ -721,6 +731,7 @@ header nav a:hover::after {
         flex-direction: column;
         text-align: center;
         width: 100%;
+        max-width: 100%;
         padding: 30px 10px;
 
     }
@@ -728,6 +739,7 @@ header nav a:hover::after {
     #home .intro div {
         order: 1;
         width: 100%; 
+        max-width: 80%;
         text-align: center;
     }
 
@@ -737,13 +749,11 @@ header nav a:hover::after {
     }
 
     .intro h2 {
-        font-size: 1.8em; 
         padding-top: 30px;
-
     }
 
-    .intro p {
-        font-size: 1em; 
+    #home .intro h2 {
+        font-size: 2.5em; 
     }
 
     .contact-icons {
@@ -853,6 +863,30 @@ header nav a:hover::after {
         border-radius: 10px;
         overflow: hidden;
     }
+
+    .project-box {
+        width: 90%;             
+        margin: 12px auto;
+    }
+
+    .project-media {
+    width: 100%;
+    aspect-ratio: 16 / 10;   
+    overflow: hidden;         
+    border-radius: 12px;      
+    }
+
+    .project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        
+    object-position: center;   
+    transition: transform 0.6s ease;
+    }
+
+    .project-media img:hover {
+    transform: scale(1.05);   
+    }
     
 }
 
@@ -863,13 +897,14 @@ header nav a:hover::after {
         flex-direction: column;
         text-align: center;
         width: 100%;
+        max-width: 100%;
         padding: 30px 10px;
-
     }
 
     #home .intro div {
         order: 1;
         width: 100%; 
+        max-width: 80%;
         text-align: center;
     }
 
@@ -879,12 +914,7 @@ header nav a:hover::after {
     }
 
     .intro h2 {
-        font-size: 1.8em; 
         padding-top: 30px;
-    }
-
-    .intro p {
-        font-size: 1em; 
     }
 
     .contact-icon {
@@ -925,16 +955,6 @@ header nav a:hover::after {
         margin-top: 0px;
     }
 
-}
-
-@media (max-width: 400px) {
-  .modules-tabs {
-    width: 98%;
-    justify-content: center;
-    gap: 0px;
-    padding: 6px 0px;
-  }
- 
 }
 
 
